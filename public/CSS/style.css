@@ -1,0 +1,174 @@
+/* -----------------Universal css--------------------*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+.bg{
+  background-color: #606060 !important;
+}
+
+
+p {
+  font-size: .9rem;
+  line-height: 1.6;
+  font-weight: 400;
+  color: #606060;
+  margin-top: 5px;
+  margin-bottom: 2rem;
+}
+
+h1 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1::after{
+  content: "";
+  display: block;
+  margin: 10px auto 20px;
+  background: #606060;
+  height: 3px;
+  width: 170px;
+}
+
+#h1-tag-Blogs::after{
+  width: 285px;
+}
+
+h3,
+h4 {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+/* ------------------- styling navbar --------------------*/
+
+.nav-item a {
+  color: #f0eeee !important;
+  font-weight: bold;
+}
+
+.nav-item:hover::after{
+  content: "";
+  display: block;
+  margin: auto 10px;
+  background: white;
+  height: 2px;
+  width: 100px;
+}
+
+.icon a i {
+  margin: 10px;
+  cursor: pointer !important;
+}
+
+i {
+  color: white !important;
+}
+
+.fa-heart{
+  color: red !important;
+}
+
+
+.dropdown_menu a{
+  color: #606060 !important;
+}
+
+
+/* ========== Styling Button ========= */
+
+.contactbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.contactbutton button {
+  background-color: white;
+  color: #606060;
+  border-color: #606060;
+  margin-top: -15px;
+  border-radius: 0%;
+}
+
+.contactbutton button:hover {
+  background-color: #606060;
+  color: white !important;
+  border-color: transparent;
+} 
+
+.contactbutton a {
+  background-color: white;
+  color: #606060;
+  border-color: #606060;
+  margin-top: -15px;
+  border-radius: 0%;
+}
+
+.contactbutton a:hover {
+  background-color: #606060;
+  color: white !important;
+  border-color: transparent;
+} 
+
+
+.searchbutton button {
+  background-color: white;
+  color: #606060;
+  border-color: #606060;
+  margin-top: -15px;
+  border-radius: 0%;
+}
+
+.searchbutton button:hover {
+  background-color: #606060;
+  color: white !important;
+  border-color: transparent;
+} 
+
+
+/* ========= Footer ========= */
+
+/* footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-top: 100px;
+} */
+
+
+/* ======================= Media Queries==================*/
+
+@media(max-width: 1200px) {
+  .nav-item {
+    text-align: center !important;
+  }
+
+  .icon {
+    text-align: center !important;
+
+  }
+  .sect{
+    height: auto;
+    margin-top: 50px;
+  }
+
+  footer{
+    height: auto;
+    margin-top: 80px;
+  }
+}
+
+@media(max-width: 991px) {
+
+  .nav-item:hover::after{
+    background: #606060;
+  }
+
+}

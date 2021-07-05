@@ -1,0 +1,35 @@
+<%- include("./partials/header") %>
+
+<section class="sect">
+
+  <div class="m-5 text-center">
+    <h1>Verify OTP</h1>
+  </div>
+  
+  
+  <div class="container"> 
+    <div class= "card">
+      
+      <div class="card-text text-center">
+        <h5 class="mt-3 text-danger">Please enter the six digit OTP sent at <% userDetails.email %> within 5 minutes. </h5> 
+      </div>
+      
+      <form class="container" action="/verifyOTP?username=<%= userDetails.username %>&email=<%= userDetails.email %>&password=<%= userDetails.password %>&six_digit_otp=<%= userDetails.six_digit_otp %>" method="POST">
+        
+        <div class="form-group">
+          <input type="number" class="form-control mt-5" name="sixDigitOTP" id="exampleInputOTP" placeholder="Enter OTP">
+        </div>
+        
+        <div class="contactbutton m-5">
+          <button type="submit" class="btn btn-primary">Submit OTP</button>
+        </div>
+    
+      </form>
+      
+    </div>
+  </div>
+  
+  <br><br><br><br>
+</section>
+
+<%- include("./partials/footer")%>

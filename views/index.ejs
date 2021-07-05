@@ -1,0 +1,56 @@
+<%- include('./partials/header') -%>
+
+<section class="sect">
+
+  <br><br>
+  <div class="mb-5 text-center">
+    <h1 id="h1-tag-Blogs">Welcome to My Shop</h1>
+  </div>
+
+  <div class="container">
+    <div class="row text-center ">
+
+
+      <% list_of_products.forEach(function(element, index){ %>
+      <div class="d-block mx-auto">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card mt-3" style="width: 18rem;">
+            <img class="card-img-top"
+              src="https://images.unsplash.com/photo-1523474253046-8cd2748b5fd2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80"
+              alt="Card image cap">
+            <div class="card-body">
+              <small><strong>id: <%= element._id %></strong></small>
+              <h5 class="card-title"><%= element.productName %></h5>
+
+              <h6 class="card-title">₹<%= element.productPrice %>/-</h6>
+              <p class="card-text"><%= element.productDescription %></p>
+
+              <div class="container">
+                <div class="row">
+
+                  <% if(user!= undefined && user.type == "admin") {%>
+
+                  <a href="/update-product/<%= element._id %>" class="btn btn-primary">Edit</a>
+
+                  <form action="/delete/<%= element._id %>?_method=DELETE" method="POST">
+                    <button class="d-block ml-5 btn btn-danger">Delete</button>
+                  </form>
+
+                  <% } %>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+
+    </div>
+  </div>
+  <hr>
+  <br><br><br><br>
+</section>
+
+<%- include('./partials/footer') -%>

@@ -1,0 +1,48 @@
+<%- include("./partials/header") %>
+
+<section class="sect"> 
+  
+  <div class="m-5 text-center">
+    <h1>Login</h1>
+  </div>
+  
+  <div class="container">
+    <form  method="POST" target="/login">
+      
+      <div class="form-group">
+        <label for="exampleInputUsername1">Username</label>
+        <input type="text" class="form-control" name="username" id="exampleInputUsername1" placeholder="Username">
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="usernameEmail">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+
+
+      <div class="form-group">
+        <label for="userType">Select User Type</label>
+        <select name="userType" class="form-control" id="userType">
+          <option>user</option>
+          <option>admin</option>
+        </select>
+      </div>
+      
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+      </div>
+      
+      <a href="/register">New User ? Create account here. |</a>
+      <a href="/forgotPassword">Forgot Password ?</a>
+      
+      <div class="contactbutton m-5">
+        <button type="submit" class="btn btn-primary">Submit</button>      
+      </div>
+      
+    </form>
+  </div>
+  
+</section>
+  <%- include("./partials/footer")%>

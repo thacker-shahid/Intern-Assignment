@@ -1,0 +1,42 @@
+<%- include('./partials/header') -%>
+
+<section class="sect">
+
+  <div class="m-5 text-center">
+    <h1>Update Product</h1>
+  </div>
+  
+  <div class="container">
+    
+    <form method="POST" action="/update-product?id=<%= id %>">
+      
+      <div class="form-group">
+        <label for="productName">Product Name</label>
+        <input type="text" class="form-control" name="productName" id="productName" placeholder="New Product">
+      </div>
+
+      <div class="form-group">
+        <label for="productPrice">Product Price</label>
+        <input type="number" class="form-control" name="productPrice" id="productPrice" placeholder="Product Price">
+      </div>
+
+
+      <div class="form-group">
+        <label for="productDescription">Product Description</label>
+        <textarea name="productDescription" class="form-control" id="productDescription" cols="105" rows="10">
+
+        </textarea>
+      </div>
+      
+      <div class="contactbutton m-5">
+        <button type="submit" class="btn btn-primary">Update</button>
+      </div>
+      
+    </form>
+  </div>
+  <hr>
+  <br><br><br><br>
+</section>
+
+
+<%- include('./partials/footer') -%>
